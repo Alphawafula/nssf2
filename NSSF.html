@@ -1,0 +1,253 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  
+    <!-- <title>Document</title>
+<link rel="stylesheet" href="nssf.css">
+</head>
+
+<body>
+    <p class="nssf">NSSF SAVINGS</p>
+    <form><input type="text" placeholder="name">
+        <input type="text" placeholder="age">
+        <input type="text" placeholder="number of years">
+        <input type="text" placeholder="basicpay">
+        <button>submit</button>
+    </form> -->
+
+    <!-- <script>
+        let name = prompt('what is your name')
+        let age = prompt('How old are you?')
+        let numberOfYears = parseInt(prompt('How many years have you been working for'))
+        let basicpay = prompt('How much do You earn Per month?')
+        
+        let nssfaccumulatedperyear =(0.15*basicpay)*12
+        let TotatNssfAccumulated =nssfaccumulatedperyear*numberOfYears
+        console.log(TotatNssfAccumulated)
+        let yearsToRetirement = (55-age) 
+        console.log(yearsToRetirement)
+        alert( `Hello ${name}: your NSSF savings so far are ${TotatNssfAccumulated} shillings and you are ${yearsToRetirement} years to Retirement`)
+         -->
+        <!-- //     // alert(`hello ${name}:  your NSSF savings so far are ${NSSF}  and your are ${Retirement} years from retirement`);
+        //     alert('hello')
+        // // }else{
+        // //     alert("You don't have funds") -->
+        <!-- // // }
+    </script>
+</body>
+
+</html> --> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Retirement and NSSF Calculator</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+    form {
+        max-width: 400px;
+        margin: auto;
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 5px;
+    }
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+    input[type="text"], input[type="number"] {
+        width: calc(100% - 10px);
+        padding: 8px;
+        margin-bottom: 10px;
+    }
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+    .result {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+</style>
+</head>
+<body>
+
+<form id="retirementForm" onsubmit="calculateNSSF(event)">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" required>
+
+    <label for="yearsWorked">Years Worked:</label>
+    <input type="number" id="yearsWorked" required>
+
+    <input type="submit" value="Calculate">
+</form>
+
+<div id="result" class="result" style="display: none;">
+    <h2>Results</h2>
+    <p><strong>Years to Retirement:</strong> <span id="yearsToRetirement"></span></p>
+    <p><strong>Total NSSF Accumulated:</strong> KSh <span id="totalNSSF"></span></p>
+</div>
+
+<script>
+function calculateNSSF(event) {
+    event.preventDefault();
+
+    // Constants
+    const monthlySalary = 50000; // Assuming a constant monthly salary of KSh 50,000
+    const nssfRate = 0.15; // NSSF rate (15% of the salary)
+    const retirementAge = 55; // Retirement age
+
+    // Retrieve input values
+    const name = document.getElementById('name').value;
+    const age = parseInt(document.getElementById('age').value);
+    const yearsWorked = parseInt(document.getElementById('yearsWorked').value);
+
+    // Calculate years to retirement
+    const yearsToRetirement = retirementAge - age;
+
+    // Calculate total NSSF accumulated
+    const totalNSSF = yearsWorked * 12 * monthlySalary * nssfRate;
+
+    // Display results
+    document.getElementById('yearsToRetirement').textContent = yearsToRetirement;
+    document.getElementById('totalNSSF').textContent = totalNSSF.toFixed(2); // Format to two decimal places
+
+    // Show the result section
+    document.getElementById('result').style.display = 'block';
+}
+</script>
+
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Retirement and NSSF Calculator</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+    form {
+        max-width: 400px;
+        margin: auto;
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 5px;
+    }
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+    input[type="text"], input[type="number"] {
+        width: calc(100% - 10px);
+        padding: 8px;
+        margin-bottom: 10px;
+    }
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+    .result {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .heading{
+        text-align: center;
+        color: rgb(17, 52, 248);
+    }
+    .heading2{
+        text-align: center;
+        color: #4CAF50;
+    }
+</style>
+</head>
+<body>
+    <h1 class="heading">WELCOME TO THE NSSF PORTAL</h1>
+    <h2 class="heading2">Kindly fill the form to know your NSSF savings</h2>
+
+<form id="retirementForm" onsubmit="calculateRetirement(event)">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" required>
+
+    <label for="yearsWorked">Years Worked:</label>
+    <input type="number" id="yearsWorked" required>
+
+    <label for="salary">Monthly Salary ():</label>
+    <input type="number" id="salary"  required>
+
+    <input type="submit" value="Calculate">
+</form>
+
+<div id="result" class="result" style="display: none;">
+    <h3>Your NSSF information</h3>
+    <p><strong>Years to Retirement:</strong> <span id="yearsToRetirement"></span></p>
+    <p><strong>Total NSSF Accumulated:</strong> shillings <span id="totalNSSF"></span></p>
+</div>
+
+<script>
+function calculateRetirement(event) {
+    event.preventDefault();
+
+    // Constants
+    const retirementAge = 55;
+    const nssfRate = 0.15; // 15% NSSF rate
+    const monthsPerYear = 12;
+
+    // Retrieve input values
+    const name = document.getElementById('name').value;
+    const age = parseInt(document.getElementById('age').value);
+    const yearsWorked = parseInt(document.getElementById('yearsWorked').value);
+    const salary = parseInt(document.getElementById('salary').value);
+
+    // Calculate years to retirement
+    const yearsToRetirement = retirementAge - age;
+
+    // Calculate total NSSF accumulated
+    const totalNSSF = yearsWorked * monthsPerYear * salary * nssfRate;
+
+    // Display results
+    document.getElementById('yearsToRetirement').textContent = yearsToRetirement;
+    document.getElementById('totalNSSF').textContent = totalNSSF.toFixed(2); // Format to two decimal places
+
+    // Show the result section
+    document.getElementById('result').style.display = 'block';
+}
+</script>
+
+</body>
+</html>
+
